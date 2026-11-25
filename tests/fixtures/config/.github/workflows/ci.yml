@@ -36,3 +36,5 @@ jobs:
       - run: echo "PR ${{ github.event.workflow_run.pull_requests[0].head.ref }}"
       - run: echo "Base ${{ github.event.workflow_run.pull_requests[0].base.repo.name }}"
       - run: echo "About ${{ github.event.workflow_run.head_repository.description }}"
+      - run: echo "Label ${{ github.event.issue.labels[0].description }}"
+      - run: echo "Repo ${{ github.event.pull_request.head.repo.description }}"

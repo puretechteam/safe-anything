@@ -8,6 +8,7 @@
 .github/workflows/ci.yml:35 config.gha-script-injection
 .github/workflows/ci.yml:36 config.gha-script-injection
 .github/workflows/ci.yml:38 config.gha-script-injection
+.github/workflows/ci.yml:40 config.gha-script-injection
 .github/workflows/ci.yml:2 config.gha-pull-request-target
 .github/workflows/ci.yml:3 config.gha-write-all
 .github/workflows/ci.yml:8 config.gha-unpinned-action
