@@ -126,7 +126,7 @@ pub static RULES: &[Rule] = &[
         "config.gha-script-injection",
         High,
         workflow,
-        r"\$\{\{\s*github\.(?:event\.(?:issue|pull_request|comment|review|review_comment|discussion|head_commit|commits|pages|workflow_run)[\w.\[\]*]*\.(?:title|body|message|name|label|ref|email|default_branch|head_branch|display_title)|head_ref)\s*\}\}",
+        r"\$\{\{\s*github\.(?:event\.(?:(?:issue|pull_request|comment|review|review_comment|discussion|head_commit|commits|pages|check_suite|check_run\.check_suite)[\w.\[\]*]*|workflow_run(?:\.(?:head_repository|head_commit|pull_requests)[\w.\[\]*]*)?)\.(?:title|body|message|name|label|ref|email|default_branch|head_branch|display_title)|head_ref)\s*\}\}",
         None,
         "Text an outsider controls (a PR title, issue body, branch name) is pasted into the workflow, so it can run commands.",
         "Pass it through an env: variable and use \"$VAR\" in the script."

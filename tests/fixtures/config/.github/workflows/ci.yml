@@ -29,3 +29,7 @@ jobs:
       - run: echo "Title ${{ github.event.workflow_run.display_title }}"
       - run: echo "Msg ${{ github.event.workflow_run.head_commit.message }}"
       - run: echo "Run ${{ github.event.workflow_run.id }} ended ${{ github.event.workflow_run.conclusion }}"
+      - run: echo "Base ${{ github.event.workflow_run.repository.name }} on ${{ github.event.workflow_run.repository.default_branch }}"
+      - run: echo "Fork ${{ github.event.workflow_run.head_repository.name }}"
+      - run: echo "Suite ${{ github.event.check_suite.head_branch }}"
+      - run: echo "Check ${{ github.event.check_run.check_suite.head_branch }} by ${{ github.event.check_run.name }}"
