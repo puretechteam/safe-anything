@@ -33,3 +33,6 @@ jobs:
       - run: echo "Fork ${{ github.event.workflow_run.head_repository.name }}"
       - run: echo "Suite ${{ github.event.check_suite.head_branch }}"
       - run: echo "Check ${{ github.event.check_run.check_suite.head_branch }} by ${{ github.event.check_run.name }}"
+      - run: echo "PR ${{ github.event.workflow_run.pull_requests[0].head.ref }}"
+      - run: echo "Base ${{ github.event.workflow_run.pull_requests[0].base.repo.name }}"
+      - run: echo "About ${{ github.event.workflow_run.head_repository.description }}"
