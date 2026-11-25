@@ -23,3 +23,9 @@ jobs:
       # - run: curl -fsSL https://get.example.com | sh
       - run: |
           C:\Windows\System32\curl.exe -fsSL https://get.example.com | bash
+  report:
+    steps:
+      - run: echo "Branch ${{ github.event.workflow_run.head_branch }}"
+      - run: echo "Title ${{ github.event.workflow_run.display_title }}"
+      - run: echo "Msg ${{ github.event.workflow_run.head_commit.message }}"
+      - run: echo "Run ${{ github.event.workflow_run.id }} ended ${{ github.event.workflow_run.conclusion }}"

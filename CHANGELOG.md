@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Config: `config.gha-script-injection` also reports `workflow_run` fields that the triggering fork controls:
+  `head_branch`, `display_title` and `head_commit.message`. `id` and `conclusion` stay quiet.
 - Agent: `agent.mcp-plaintext-secret` also checks the `headers` and `http_headers` of remote MCP servers
   in JSON configs. `Authorization` and `Proxy-Authorization` always count. In `env` and headers alike, a
   value is judged after its auth scheme and with its variables taken out: `Bearer ${API_TOKEN}` and
